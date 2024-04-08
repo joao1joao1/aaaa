@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Negócio dificil</h1>
+
+    <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+</head>
+<body>
+
+<input type="number" id="input1" placeholder="Digite o primeiro número">
+<input type="number" id="input2" placeholder="Digite o segundo número">
+<button onclick="somar()">Somar</button>
+<p id="resultado"></p>
+
+<script>
+function somar() {
+    // Captura os valores das inputs
+    var num1 = parseFloat(document.getElementById("input1").value);
+    var num2 = parseFloat(document.getElementById("input2").value);
+
+    // Verifica se os valores são números
+    if (!isNaN(num1) && !isNaN(num2)) {
+        // Realiza a soma
+        var resultado = num1 + num2;
+        // Exibe o resultado no parágrafo
+        document.getElementById("resultado").textContent = "Resultado da soma: " + resultado;
+    } else {
+        // Exibe uma mensagem de erro se os valores não forem números
+        document.getElementById("resultado").textContent = "Por favor, digite números válidos";
+    }
+}
+</script>
+
+</body>
+</html>
